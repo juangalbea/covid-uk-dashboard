@@ -123,4 +123,60 @@ export default {
 .box h5 {
   line-height: 26px;
 }
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  #data {
+  margin: 90px 7vw 90px 7vw;
+}
+
+#cases {
+  width: 43vw;
+}
+
+#alert {
+  margin-left: 5vw;
+  margin-right: 4vw;
+}
+
+.box {
+  width: 39vw;
+}
+
+.box img {
+  margin-left: 6vw;
+  margin-right: 3vw;
+}
+}
+
+@media (max-width: 960px) {
+  #data {
+  margin: 50px;
+  height: 500px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#cases {
+  width: 80vw;
+  margin: 0;
+}
+
+.box {
+  width: 80vw;
+  margin-top: 30px;
+}
+
+#alert {
+  margin-left: 7vw;
+  margin-right: 6vw;
+}
+
+.box img {
+  margin-left: 8vw;
+  margin-right: 5vw;
+}
+}
 </style>

@@ -2,19 +2,21 @@
   <div id="header">
     <div id="title">
       <h1>COVID UK</h1>
-      <p>Use this tool to find out the latest stats for the Coronavirus in the UK</p>
+      <p>
+        Use this tool to find out the latest stats for the Coronavirus in the UK
+      </p>
     </div>
     <arrow-down-icon size="1.8x" class="custom-class arrow"></arrow-down-icon>
   </div>
 </template>
 
 <script>
-import { ArrowDownIcon } from 'vue-feather-icons'
+import { ArrowDownIcon } from "vue-feather-icons";
 export default {
   components: {
-    ArrowDownIcon
-  }
-}
+    ArrowDownIcon,
+  },
+};
 </script>
 
 <style scoped>
@@ -23,8 +25,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  background: url('../assets/pandemic2.jpg');
+
+  background: url("../assets/pandemic2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -53,5 +55,46 @@ h1 {
 
 .arrow:hover {
   color: white;
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  #header {
+    max-width: 100vw;
+  }
+
+  #title {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 960px) {
+  #header {
+    max-width: 100vw;
+  }
+  
+  #title {
+    width: 50vw;
+    margin: 2px;
+    min-width: 340px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  #title p {
+    width: 280px;
+    line-height: 30px;   
+    margin: 20px; 
+  }
+
+  #title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 866px;
+  margin: 167px;
+}
 }
 </style>

@@ -67,4 +67,10 @@ h5 {
   text-align: center;
   color: #2c3e50;
 }
+
+@media (max-width: 1200px) {
+  #app {
+    width: 100vw;
+  }
+}
 </style>

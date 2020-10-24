@@ -1,6 +1,9 @@
 <template>
   <div id="footer">
-    <h1>footer</h1>
+      <div>
+        <p>An RCCO development challenge by JUAN GARCIA ALBEA</p><br><p>Data source: Gov.uk</p>
+      </div>
+      <h3>COVID UK</h3>
   </div>
 </template>
 
@@ -12,7 +15,49 @@ export default {
 
 <style scoped>
 #footer {
-  background-color: cyan;
-  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #1c4155;
+  height: 120px;
+  padding-left: 95px;
+  padding-right: 75px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+#footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#footer p {
+  line-height: 8px;
+}
+
+#footer h3 {
+  margin-top: 10px;
+}
+
+@media (max-width: 960px) {
+  #footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  background-color: #1c4155;
+  height: 220px;
+  padding-left: 95px;
+  padding-right: 75px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+#footer p {
+  line-height: 20px;
+}
 }
 </style>
