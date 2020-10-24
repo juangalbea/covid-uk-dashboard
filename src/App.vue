@@ -28,6 +28,30 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 56px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h5 {
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #5f5f5f;
+}
+
 /* p {
   font-family: 'Roboto', sans-serif;
 } */
