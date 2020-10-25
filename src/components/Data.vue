@@ -1,12 +1,12 @@
 <template>
-  <div id="data">
+  <div id="data" v-bind="transmissions">
     <div id="cases">
       <div id="alert">
         <img id="circle" src="../assets/alert-circle.svg" alt="">
-        <h4>Above<br>average</h4>
+        <h4>{{transmissions[0] > averageLastSevenDays() ? "Above" : "Below"}}<br>average</h4>
       </div>
       <div id="yesterday">
-        <h1>26,688</h1>
+        <h1>{{addComma(transmissions[0])}}</h1>
         <h3>New Cases Yesterday</h3>
       </div>
     </div>
@@ -15,15 +15,15 @@
         <img src="../assets/trending-up.svg" alt="">
         <div>
           <div style="display: flex; align-items: center;">
-            <span class="robotofont">+</span><h2>300%</h2>
+            <span class="robotofont">{{compareTwoDays(transmissions[0],transmissions[1]) == 'increase' ? "+" : "-"}}</span><h2>300%</h2>
           </div>
-          <h5>Increase from previous day</h5>
+          <h5>{{compareTwoDays(transmissions[0],transmissions[1])}} from previous day</h5>
         </div>
       </div>
       <div class="box">
         <img src="../assets/calendar.svg" alt="">
         <div>
-          <h2>17,276</h2>
+          <h2>{{addComma(averageLastSevenDays())}}</h2>
           <h5>Average of last 7 days</h5>
         </div>
       </div>
@@ -33,7 +33,22 @@
 
 <script>
 export default {
-
+  name: "Data",
+  props: ["transmissions"],
+  methods: {
+    addComma(x) {
+      return parseInt(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+    compareTwoDays(a,b) {
+      return a > b ? 'Increase' : 'Decrease';
+    },
+    // percentageChangedLastTwoDays(a,b) {
+    //   return a
+    // },
+    averageLastSevenDays() {
+      return Math.round(this.transmissions.reduce((a,b) => (a + b),0) / this.transmissions.length);
+    },
+  }
 }
 </script>
 
