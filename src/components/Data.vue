@@ -15,7 +15,7 @@
         <img src="../assets/trending-up.svg" alt="">
         <div>
           <div style="display: flex; align-items: center;">
-            <span class="robotofont">{{compareTwoDays(transmissions[0],transmissions[1]) == 'increase' ? "+" : "-"}}</span><h2>300%</h2>
+            <span class="robotofont">{{compareTwoDays(transmissions[0],transmissions[1]) == 'increase' ? "+" : "-"}}</span><h2>{{percentageChangedLastTwoDays(transmissions[0], transmissions[1])}}%</h2>
           </div>
           <h5>{{compareTwoDays(transmissions[0],transmissions[1])}} from previous day</h5>
         </div>
@@ -42,9 +42,9 @@ export default {
     compareTwoDays(a,b) {
       return a > b ? 'Increase' : 'Decrease';
     },
-    // percentageChangedLastTwoDays(a,b) {
-    //   return a
-    // },
+    percentageChangedLastTwoDays(a,b) {
+      return Math.abs(Math.round(b * 100 / a - 100));
+    },
     averageLastSevenDays() {
       return Math.round(this.transmissions.reduce((a,b) => (a + b),0) / this.transmissions.length);
     },
