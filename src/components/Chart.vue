@@ -6,7 +6,7 @@
         :height="400"
         :chart-data="datacollection"
       ></line-chart>
-      <button>VIEW IN DETAIL</button>
+      <a href="https://www.gov.uk/coronavirus" target="_blank"><button>VIEW IN DETAIL</button></a>
     </div>
   </div>
 </template>
