@@ -46,11 +46,18 @@ export default {
   #footer {
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   height: 220px;
 }
 
 #footer p {
   line-height: 20px;
+}
+
+#footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 }
 </style>

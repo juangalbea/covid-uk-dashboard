@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Content v-bind:transmissions="transmissions" />
+    <Content :transmissions="transmissions" :dates="dates" />
     <Footer />
   </div>
 </template>
@@ -21,7 +21,8 @@ export default {
   },
   data() {
     return {
-      transmissions: []
+      transmissions: [],
+      dates: []
     }
   },
   methods: {
@@ -32,17 +33,19 @@ export default {
     'filters=areaType=nation;areaName=england&' +
     'structure={"date":"date","newCases":"newCasesByPublishDate"}')
       .then(res => {
-        console.log(res)
         const data = res.data.data.slice(0, 7);
         const persons = []
+        const time = []
         for (let key in data) {
           const person = data[key]
-          console.log(person)
           persons.push(person.newCases)
+          const day = person.date.split("-")
+          day.shift();
+          const day1 = day.reverse().join("/")
+          time.push(day1)
         }
-        console.log(persons)
         this.transmissions = persons
-        console.log(this.transmissions)
+        this.dates = time
       })
       .catch((err) => console.log(err));
   }
@@ -52,8 +55,8 @@ export default {
 <style>
 html, body {
   margin: 0; 
-  padding: 0; 
-  overflow-x:hidden;
+  padding: 0;
+  overflow-x: hidden;
   }
 
 h1 {

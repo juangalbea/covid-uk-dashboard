@@ -1,5 +1,5 @@
 <template>
-  <div id="data" v-bind="transmissions">
+  <div id="data">
     <div id="cases">
       <div id="alert">
         <img id="circle" src="../assets/alert-circle.svg" alt="">
