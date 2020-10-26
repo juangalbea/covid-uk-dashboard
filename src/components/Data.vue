@@ -177,6 +177,7 @@ export default {
 #cases {
   width: 80vw;
   margin: 0;
+  height: 130px;
 }
 
 .box {
@@ -192,6 +193,29 @@ export default {
 .box img {
   margin-left: 8vw;
   margin-right: 5vw;
+}
+
+#cases h1 {
+  font-size: 56px;
+}
+
+#cases h3 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#cases h4 {
+  font-size: 16px;
+  line-height: 15px;
+}
+
+#circle {
+  width: 50px;
+}
+
+#alert {
+  margin-left: 10vw;
+  margin-right: 6vw;
 }
 }
 </style>
