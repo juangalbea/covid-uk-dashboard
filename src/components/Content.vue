@@ -2,7 +2,7 @@
   <div>
     <div v-bind="transmissions">
       <Data v-bind:transmissions="transmissions" />
-      <Chart />
+      <!-- <Chart /> -->
       <Rules />
     </div>
   </div>
@@ -10,14 +10,14 @@
 
 <script>
 import Data from "./Data";
-import Chart from "./Chart";
+// import Chart from "./Chart";
 import Rules from "./Rules";
 export default {
   name: "Content",
   props: ["transmissions"],
   components: {
     Data,
-    Chart,
+    // Chart,
     Rules,
   },
 };

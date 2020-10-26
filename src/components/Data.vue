@@ -43,7 +43,7 @@ export default {
       return a > b ? 'Increase' : 'Decrease';
     },
     percentageChangedLastTwoDays(a,b) {
-      return Math.abs(Math.round(b * 100 / a - 100));
+      return Math.abs(Math.round((b - a) * 100 / b));
     },
     averageLastSevenDays() {
       return Math.round(this.transmissions.reduce((a,b) => (a + b),0) / this.transmissions.length);

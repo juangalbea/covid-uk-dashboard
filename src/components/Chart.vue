@@ -13,5 +13,6 @@ export default {
 <style scoped>
 #chart {
   background-color: grey;
+  max-width: 100vw;
 }
 </style>

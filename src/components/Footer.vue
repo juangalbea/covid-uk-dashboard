@@ -25,6 +25,7 @@ export default {
   padding-right: 75px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  max-width: 95vw;
 }
 
 #footer div {
@@ -43,17 +44,9 @@ export default {
 
 @media (max-width: 960px) {
   #footer {
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  color: white;
-  background-color: #1c4155;
   height: 220px;
-  padding-left: 95px;
-  padding-right: 75px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
 }
 
 #footer p {

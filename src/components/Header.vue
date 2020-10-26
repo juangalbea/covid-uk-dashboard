@@ -32,6 +32,7 @@ export default {
   background-position: center;
   height: 520px;
   color: white;
+  margin: 0;
 }
 
 #title {
@@ -60,10 +61,12 @@ h1 {
 @media (min-width: 960px) and (max-width: 1200px) {
   #header {
     max-width: 100vw;
+    width: 100vw;
   }
 
   #title {
-    margin-left: 200px;
+    margin-left: 100px;
+    max-width: 60vw;
   }
 }
 
@@ -95,6 +98,7 @@ h1 {
   justify-content: center;
   width: 866px;
   margin: 167px;
+  max-width: 80vw;
 }
 }
 </style>

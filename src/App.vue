@@ -50,6 +50,12 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0; 
+  padding: 0; 
+  overflow-x:hidden;
+  }
+
 h1 {
   font-size: 80px;
   font-family: "Roboto Condensed", sans-serif;
