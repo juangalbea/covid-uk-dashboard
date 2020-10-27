@@ -15,7 +15,7 @@
         <img src="../assets/trending-up.svg" alt="">
         <div>
           <div style="display: flex; align-items: center;">
-            <span class="robotofont">{{compareTwoDays(transmissions[0],transmissions[1]) == 'increase' ? "+" : "-"}}</span><h2>{{percentageChangedLastTwoDays(transmissions[0], transmissions[1])}}%</h2>
+            <span class="robotofont">{{compareTwoDays(transmissions[0],transmissions[1]) == 'Increase' ? "+" : "-"}}</span><h2>{{percentageChangedLastTwoDays(transmissions[0], transmissions[1])}}%</h2>
           </div>
           <h5>{{compareTwoDays(transmissions[0],transmissions[1])}} from previous day</h5>
         </div>
