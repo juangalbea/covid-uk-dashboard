@@ -48,6 +48,8 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   height: 220px;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 #footer p {
