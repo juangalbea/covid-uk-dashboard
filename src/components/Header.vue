@@ -26,7 +26,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  background: url("../assets/pandemic2.jpg");
+  background: url("../assets/pandemic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -73,8 +73,12 @@ h1 {
 @media (max-width: 960px) {
   #header {
     max-width: 100vw;
+    background: url("../assets/pandemic-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
-  
+
   #title {
     width: 50vw;
     margin: 2px;
@@ -87,18 +91,29 @@ h1 {
 
   #title p {
     width: 280px;
-    line-height: 30px;   
-    margin: 20px; 
+    line-height: 30px;
+    margin: 20px;
   }
 
   #title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 866px;
-  margin: 167px;
-  max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 866px;
+    margin: 167px;
+    max-width: 80vw;
+  }
 }
+
+@media (max-width: 480px) {
+  #header {
+    max-width: 100vw;
+    background: url("../assets/pandemic-very-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
+
 </style>
