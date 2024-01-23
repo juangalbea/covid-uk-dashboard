@@ -122,7 +122,7 @@ export default {
 }
 
 .robotofont {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif, 'ernesto';
   font-size: 38px;
   font-weight: 900;
   color: #000000;
